@@ -3,201 +3,210 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee" >
 
     <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>LoginServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.LoginServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>RegisterServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.RegisterServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RedirectServlet</servlet-name>
-        <servlet-class>RedirectServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.RedirectServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.RedirectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.RedirectServlet</servlet-name>
         <url-pattern>/employee</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ManagerServlet</servlet-name>
-        <servlet-class>ManagerServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ManagerServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ManagerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ManagerServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ManagerServlet</servlet-name>
         <url-pattern>/manager</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ReimbursementServlet</servlet-name>
-        <servlet-class>ReimbursementServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ReimbursementServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ReimbursementServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReimbursementServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ReimbursementServlet</servlet-name>
         <url-pattern>/reimbursement</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ReimbursementFormServlet</servlet-name>
-        <servlet-class>ReimbursementFormServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ReimbursementFormServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ReimbursementFormServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReimbursementFormServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ReimbursementFormServlet</servlet-name>
         <url-pattern>/reimbursementformservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ReimbursementFormRedirect</servlet-name>
-        <servlet-class>ReimbursementFormRedirect</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ReimbursementFormRedirect</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ReimbursementFormRedirect</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReimbursementFormRedirect</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ReimbursementFormRedirect</servlet-name>
         <url-pattern>/reimbursementform</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>LogoutServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.LogoutServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.LogoutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PendingServlet</servlet-name>
-        <servlet-class>PendingServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.PendingServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.PendingServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PendingServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.PendingServlet</servlet-name>
         <url-pattern>/pending</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ApprovedReimbursementsServlet</servlet-name>
-        <servlet-class>ApprovedReimbursementsServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ApprovedReimbursementsServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ApprovedReimbursementsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ApprovedReimbursementsServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ApprovedReimbursementsServlet</servlet-name>
         <url-pattern>/ApprovedReimbursementsServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>FindAllRejectServlet</servlet-name>
-        <servlet-class>FindAllRejectServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.FindAllRejectServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.FindAllRejectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FindAllRejectServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.FindAllRejectServlet</servlet-name>
         <url-pattern>/FindAllReject</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>WelcomeServlet</servlet-name>
-        <servlet-class>WelcomeServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.WelcomeServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.WelcomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.WelcomeServlet</servlet-name>
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>EmployeeTableServlet</servlet-name>
-        <servlet-class>EmployeeTableServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.EmployeeTableServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.EmployeeTableServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>EmployeeTableServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.EmployeeTableServlet</servlet-name>
         <url-pattern>/employeetable</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ManagerTableServlet</servlet-name>
-        <servlet-class>ManagerTableServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ManagerTableServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ManagerTableServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ManagerTableServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ManagerTableServlet</servlet-name>
         <url-pattern>/managertable</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ManHomeServlet</servlet-name>
-        <servlet-class>ManHomeServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ManHomeServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ManHomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ManHomeServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ManHomeServlet</servlet-name>
         <url-pattern>/manhome</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ProfileServlet</servlet-name>
-        <servlet-class>ProfileServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ProfileServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ProfileServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ProfileServlet</servlet-name>
         <url-pattern>/profile</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ProfileDataServlet</servlet-name>
-        <servlet-class>ProfileDataServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ProfileDataServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ProfileDataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ProfileDataServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ProfileDataServlet</servlet-name>
         <url-pattern>/profiledata</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PendingDataServlet</servlet-name>
-        <servlet-class>PendingDataServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.PendingDataServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.PendingDataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PendingDataServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.PendingDataServlet</servlet-name>
         <url-pattern>/pendingdataservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>FindAllPendingServlet</servlet-name>
-        <servlet-class>FindAllPendingServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.FindAllPendingServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.FindAllPendingServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FindAllPendingServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.FindAllPendingServlet</servlet-name>
         <url-pattern>/findallpendingservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ApprovedReimbursementsDataServlet</servlet-name>
-        <servlet-class>ApprovedReimbursementsDataServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.ApprovedReimbursementsDataServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.ApprovedReimbursementsDataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ApprovedReimbursementsDataServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.ApprovedReimbursementsDataServlet</servlet-name>
         <url-pattern>/approvedreimbursementsdataservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RejectedReimbursementsDataServlet</servlet-name>
-        <servlet-class>RejectedReimbursementsDataServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.RejectedReimbursementsDataServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.RejectedReimbursementsDataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>RejectedReimbursementsDataServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.RejectedReimbursementsDataServlet</servlet-name>
         <url-pattern>/rejectedreimbursementsdataservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PendingTableServlet</servlet-name>
-        <servlet-class>PendingTableServlet</servlet-class>
+        <servlet-name>com.reimbursement.servlet.PendingTableServlet</servlet-name>
+        <servlet-class>com.reimbursement.servlet.PendingTableServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PendingTableServlet</servlet-name>
+        <servlet-name>com.reimbursement.servlet.PendingTableServlet</servlet-name>
         <url-pattern>/pendingtable</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>com.reimbursement.servlet.RedirectEmployeePendingTable</servlet-name>
+        <servlet-class>com.reimbursement.servlet.RedirectEmployeePendingTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>com.reimbursement.servlet.RedirectEmployeePendingTable</servlet-name>
+        <url-pattern>/RedirectEmployeePendingTable</url-pattern>
     </servlet-mapping>
 
 
