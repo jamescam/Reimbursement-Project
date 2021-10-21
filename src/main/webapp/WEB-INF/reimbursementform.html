@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Reimbursements:</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="http://localhost:8082/reimbursement/employee">Home</a>
+          <a class="nav-link" href="http://localhost:8082/reimbursement/reimbursement">Reimbursements</a>
+          <a class="nav-link" href="http://localhost:8082/reimbursement/proile">Profile</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <form class="form-group" method="POST" style= "text-align: center; border: 3px solid silver;">
+        <div class="form-group">
+          <label for="formGroupExampleInput">User ID</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User ID" style= "text-align: center">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Purchase Date</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Purchase Date" style= "text-align: center">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Description</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description" style= "text-align: center">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Total Amount</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total Amount" style= "text-align: center">
+        </div>
+        <div class="form-group">
+          <button type=submit id="submitform">submit</button>
+        </div>
+      </form>
+      
+ 
+<script src="reimbursementform.js"></script>
+</body>
+</html>
