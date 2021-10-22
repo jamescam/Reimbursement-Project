@@ -28,29 +28,6 @@ public class PendingDAOImpl implements PendingDAO {
     }
 
     @Override
-    public ArrayList<String> findID(String pending_id) throws SQLException, ClassNotFoundException {
-        DataBaseConnection db = new DataBaseConnection();
-        Connection conn = db.establishConnection();
-        PreparedStatement ps = conn.prepareStatement("select id from pending where pending_id = ?");
-        ps.setInt(1, Integer.parseInt(pending_id));
-        ResultSet rs = ps.executeQuery();
-
-        ResultSetMetaData meta = rs.getMetaData();
-        ArrayList<String> arrList = new ArrayList<String>();
-
-        while (rs.next()) {
-
-            for (int i = 1; i <= meta.getColumnCount(); i++) {
-                String key = meta.getColumnName(i);
-                String value = rs.getString(key);
-                arrList.add(value);
-            }
-        }
-        conn.close();
-        return arrList;
-    }
-
-    @Override
     public void delete(String id) throws SQLException, ClassNotFoundException {
         DataBaseConnection dbc = new DataBaseConnection();
         Connection conn = dbc.establishConnection();
