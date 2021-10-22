@@ -1,7 +1,7 @@
 document.getElementById("submitbuttonfortable").addEventListener('click', manfunc);
 
 let xhhr = new XMLHttpRequest();
-xhhr.open("GET", "http://localhost:8082/reimbursement/pendingdataservlet");
+xhhr.open("GET", "pendingdataservlet");
 
 function manfunc(){
   

@@ -1,7 +1,7 @@
 document.getElementById("submitbuttonforRejectedtable").addEventListener('click', findrejectedfunc);
 
 let xhhr3 = new XMLHttpRequest();
-xhhr3.open("GET", "http://localhost:8082/reimbursement/rejectedreimbursementsdataservlet");
+xhhr3.open("GET", "rejectedreimbursementsdataservlet");
 
 function findrejectedfunc(){
 

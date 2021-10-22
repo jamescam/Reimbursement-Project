@@ -1,7 +1,7 @@
 document.getElementById("submitbuttonforRejectedtable").addEventListener('click', allRejected);
 
 let xhttp = new XMLHttpRequest();
-xhttp.open("GET", 'http://localhost:8082/reimbursement/FindAllReject');
+xhttp.open("GET", 'FindAllReject');
 
 function allRejected(){
     let response = xhttp.responseText;

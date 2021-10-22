@@ -2,7 +2,7 @@ const element = document.getElementById('register-button');
 element.addEventListener('click', regfunc);
 
 xhttp = new XMLHttpRequest();
-xhttp.open('POST', "http://localhost:8082/reimbursement/register");
+xhttp.open('POST', "register");
 
   function regfunc(){
 

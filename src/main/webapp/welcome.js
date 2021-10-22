@@ -2,7 +2,7 @@ let header = document.getElementById("h1");
 
 let xhhr = new XMLHttpRequest();
 
-xhhr.open("GET", "http://localhost:8082/reimbursement/welcome", true);
+xhhr.open("GET", "welcome", true);
 
 xhhr.onreadystatechange=function(){
     if (xhhr.readyState == 4 && xhhr.status == 200) {
@@ -16,7 +16,7 @@ xhhr.onreadystatechange=function(){
 
 document.getElementById("logoutsubmitbttn").addEventListener('click', logoutfunc);
 function logoutfunc(){
-    xhhr.open("GET", "http://localhost:8082/reimbursement/logout");
+    xhhr.open("GET", "logout");
     xhhr.send();
   
   }

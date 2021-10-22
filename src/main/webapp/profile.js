@@ -4,7 +4,7 @@ let thirdList = document.getElementById("li3");
 
 let xhhr = new XMLHttpRequest();
 
-xhhr.open("GET", "http://localhost:8082/reimbursement/profiledata", true);
+xhhr.open("GET", "profiledata", true);
 
 xhhr.onreadystatechange=function(){
     if (xhhr.readyState == 4 && xhhr.status == 200) {

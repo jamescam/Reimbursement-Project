@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-<body>
+<body style ="background-image: url('https://cdn.wallpapersafari.com/7/49/0oVBnO.jpg');">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Reimbursements:</a>
@@ -15,10 +15,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="http://localhost:8082/reimbursement/employee">Home</a>
-          <a class="nav-link" href="http://localhost:8082/reimbursement/reimbursement">Resolved Reimbursements</a>
-          <a class="nav-link" href="http://localhost:8082/reimbursement/RedirectEmployeePendingTable">Pending Reimbursements</a>
-          <a class="nav-link" href="http://localhost:8082/reimbursement/profile">Profile</a>
+          <a class="nav-link active" aria-current="page" href="employee">Home</a>
+          <a class="nav-link" href="reimbursement">Resolved Reimbursements</a>
+          <a class="nav-link" href="RedirectEmployeePendingTable">Pending Reimbursements</a>
+          <a class="nav-link" href="profile">Profile</a>
         </div>
       </div>
     </div>
@@ -26,20 +26,20 @@
 
     <form class="form-group" method="POST" style= "text-align: center; border: 3px solid silver;">
         <div class="form-group">
-          <label for="formGroupExampleInput">User ID</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User ID" style= "text-align: center">
+          <label for="formGroupExampleInput" style= "font-weight: 900;">User ID</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User ID" style= "text-align: center; font-weight: 900;" >
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput">Purchase Date</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Purchase Date" style= "text-align: center">
+          <label for="formGroupExampleInput" style= "font-weight: 900;">Purchase Date</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Purchase Date" style= "text-align: center; font-weight: 900;">
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">Description</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description" style= "text-align: center">
+          <label for="formGroupExampleInput2" style= "font-weight: 900;">Description</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description" style= "text-align: center; font-weight: 900;">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Total Amount</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total Amount" style= "text-align: center">
+            <label for="formGroupExampleInput2" style= "font-weight: 900;">Total Amount</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total Amount" style= "text-align: center; font-weight: 900;">
         </div>
         <div class="form-group">
           <button type=submit id="submitform">submit</button>

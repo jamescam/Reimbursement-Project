@@ -1,8 +1,10 @@
 package com.reimbursement.servlet;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reimbursement.Status;
 import com.reimbursement.data.PendingDAOImpl;
 import com.reimbursement.data.ReimbursementDAOImpl;
+import com.reimbursement.model.PendingReimbursement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import javax.servlet.ServletException;
@@ -12,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /*The Servlet that handles the post request triggered by clicking on the accept or reject buttons
  * used to accept or deny an employee's reimbursements.
@@ -24,11 +25,13 @@ public class PendingServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String userIDParam = req.getParameter("userID");
-        String purchaseParam = req.getParameter("purchase");
-        String descriptionParam = req.getParameter("description");
-        String amountParam = req.getParameter("amount");
+        ObjectMapper mapper = new ObjectMapper();
+
         String statusParam = req.getParameter("status");
+        String list = req.getParameter("list");
+
+        //Class used by ObjectMapper for deserialization.
+        PendingReimbursement pendingreimbursement = mapper.readValue(list, PendingReimbursement.class);
 
         HttpSession session = req.getSession(false);
         Object email = session.getAttribute("email");
@@ -40,28 +43,20 @@ public class PendingServlet extends HttpServlet {
             try {
                 ReimbursementDAOImpl ReimbursementDAO = new ReimbursementDAOImpl();
                 PendingDAOImpl PendingDAO = new PendingDAOImpl();
-                ArrayList<String> list = PendingDAO.findID(userIDParam);
-                ReimbursementDAO.updateApprovedReimbursements(userIDParam, purchaseParam, descriptionParam, amountParam, state.toString(), email.toString());
-                for(int i = 0; i < list.size(); i++){
-                    Object id = list.get(i);
-                    PendingDAO.delete((String) id);
-
-                }
+                ReimbursementDAO.updateApprovedReimbursements(pendingreimbursement.getPending_id(), pendingreimbursement.getPurchase_date(), pendingreimbursement.getDescription(), pendingreimbursement.getTotal_amount(), state.toString(), email.toString());
+                PendingDAO.delete(pendingreimbursement.getID());
 
             } catch (SQLException | ClassNotFoundException e) {
                 logger.error(e.getMessage(), e);
             }
-        } else {
+        } else if(statusParam.equals("reject")){
             state = Status.REJECTED;
             try {
                 ReimbursementDAOImpl ReimbursementDAO = new ReimbursementDAOImpl();
                 PendingDAOImpl PendingDAO = new PendingDAOImpl();
-                ArrayList<String> list = PendingDAO.findID(userIDParam);
-                ReimbursementDAO.updateRejectedReimbursements(userIDParam, purchaseParam, descriptionParam, amountParam, state.toString(), email.toString());
-                for(int i = 0; i < list.size(); i++){
-                    Object id = list.get(i);
-                    PendingDAO.delete((String) id);
-                }
+                ReimbursementDAO.updateRejectedReimbursements(pendingreimbursement.getPending_id(), pendingreimbursement.getPurchase_date(), pendingreimbursement.getDescription(), pendingreimbursement.getTotal_amount(), state.toString(), email.toString());
+                PendingDAO.delete(pendingreimbursement.getID());
+
             } catch (SQLException | ClassNotFoundException e) {
                 logger.error(e.getMessage(), e);
             }

@@ -51,12 +51,12 @@ public class PendingDAOImpl implements PendingDAO {
     }
 
     @Override
-    public void delete(String userID) throws SQLException, ClassNotFoundException {
+    public void delete(String id) throws SQLException, ClassNotFoundException {
         DataBaseConnection dbc = new DataBaseConnection();
         Connection conn = dbc.establishConnection();
 
         PreparedStatement ps = conn.prepareStatement("delete from pending where id = ?");
-        ps.setLong(1, Long.parseLong(userID));
+        ps.setLong(1, Long.parseLong(id));
         ps.executeUpdate();
         conn.close();
 
@@ -66,7 +66,7 @@ public class PendingDAOImpl implements PendingDAO {
     public List<Map<Pending, Pending>> findAllPendingReimbursements() throws SQLException, ClassNotFoundException {
         DataBaseConnection db = new DataBaseConnection();
         Connection conn = db.establishConnection();
-        PreparedStatement ps = conn.prepareStatement("select pending_id, purchase_date, description, total_amount, status from pending");
+        PreparedStatement ps = conn.prepareStatement("select * from pending");
         ResultSet rs = ps.executeQuery();
 
         ResultSetMetaData meta = rs.getMetaData();
@@ -90,7 +90,7 @@ public class PendingDAOImpl implements PendingDAO {
         DataBaseConnection db = new DataBaseConnection();
         Connection conn = db.establishConnection();
 
-        PreparedStatement ps = conn.prepareStatement("select pending_id, purchase_date, description, total_amount, status from pending where pending_id = ?");
+        PreparedStatement ps = conn.prepareStatement("select * from pending where pending_id = ?");
         ps.setObject(1, userID);
         ResultSet rs = ps.executeQuery();
 

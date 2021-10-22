@@ -1,11 +1,11 @@
 document.getElementById("submitbuttonforapprovedtable").addEventListener('click', aprovedfunc);
 
 let xhhr2 = new XMLHttpRequest();
-xhhr2.open("GET", "http://localhost:8082/reimbursement/approvedreimbursementsdataservlet");
+xhhr2.open("GET", "approvedreimbursementsdataservlet");
 
 function aprovedfunc(){
 
-    let response = xhhr2.responseText;
+  let response = xhhr2.responseText;
   response = JSON.parse(response);
 
   let table = document.querySelector("table");

@@ -1,7 +1,7 @@
 document.getElementById("submitbuttonforapprovedtable").addEventListener('click', allApproved);
 
 let xttp = new XMLHttpRequest();
-xttp.open("GET", 'http://localhost:8082/reimbursement/ApprovedReimbursementsServlet');
+xttp.open("GET", 'ApprovedReimbursementsServlet');
 
 function allApproved(){
     let response = xttp.responseText;

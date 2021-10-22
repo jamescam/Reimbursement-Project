@@ -5,7 +5,7 @@ const elementLoginButton = document.getElementById("login");
 elementLoginButton.addEventListener("click", loginClick);
 
 xhttp = new XMLHttpRequest();
-xhttp.open('POST', "http://localhost:8082/reimbursement/login");
+xhttp.open('POST', "login");
 
 function loginClick(){
     const email = elementEmail.value;

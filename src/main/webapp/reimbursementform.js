@@ -1,5 +1,5 @@
 let xhhr = new XMLHttpRequest();
-xhhr.open("POST", "http://localhost:8082/reimbursement/reimbursementformservlet");
+xhhr.open("POST", "reimbursementformservlet");
 
 document.getElementById("submitform").addEventListener('click', formfunc);
 document.getElementById("logoutsubmitbttn").addEventListener('click', logoutfunc);
@@ -21,7 +21,7 @@ function formfunc(){
 }
 
 function logoutfunc(){
-  xhhr.open("GET", "http://localhost:8082/reimbursement/logout");
+  xhhr.open("GET", "logout");
   xhhr.send();
 
 }
