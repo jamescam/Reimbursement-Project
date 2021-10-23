@@ -25,13 +25,12 @@ public class PendingServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ObjectMapper mapper = new ObjectMapper();
-
         String statusParam = req.getParameter("status");
-        String list = req.getParameter("list");
-
-        //Class used by ObjectMapper for deserialization.
-        PendingReimbursement pendingreimbursement = mapper.readValue(list, PendingReimbursement.class);
+        String descriptionParam = req.getParameter("description");
+        String idParam = req.getParameter("id");
+        String UserIDParam = req.getParameter("UserID");
+        String purchaseDateParam = req.getParameter("purchaseDate");
+        String totalAmountParam = req.getParameter("totalAmount");
 
         HttpSession session = req.getSession(false);
         Object email = session.getAttribute("email");
@@ -43,8 +42,8 @@ public class PendingServlet extends HttpServlet {
             try {
                 ReimbursementDAOImpl ReimbursementDAO = new ReimbursementDAOImpl();
                 PendingDAOImpl PendingDAO = new PendingDAOImpl();
-                ReimbursementDAO.updateApprovedReimbursements(pendingreimbursement.getPending_id(), pendingreimbursement.getPurchase_date(), pendingreimbursement.getDescription(), pendingreimbursement.getTotal_amount(), state.toString(), email.toString());
-                PendingDAO.delete(pendingreimbursement.getID());
+                ReimbursementDAO.updateApprovedReimbursements(UserIDParam, purchaseDateParam, descriptionParam, totalAmountParam, state.toString(), email.toString());
+                PendingDAO.delete(idParam);
 
             } catch (SQLException | ClassNotFoundException e) {
                 logger.error(e.getMessage(), e);
@@ -54,8 +53,8 @@ public class PendingServlet extends HttpServlet {
             try {
                 ReimbursementDAOImpl ReimbursementDAO = new ReimbursementDAOImpl();
                 PendingDAOImpl PendingDAO = new PendingDAOImpl();
-                ReimbursementDAO.updateRejectedReimbursements(pendingreimbursement.getPending_id(), pendingreimbursement.getPurchase_date(), pendingreimbursement.getDescription(), pendingreimbursement.getTotal_amount(), state.toString(), email.toString());
-                PendingDAO.delete(pendingreimbursement.getID());
+                ReimbursementDAO.updateRejectedReimbursements(UserIDParam, purchaseDateParam, descriptionParam, totalAmountParam, state.toString(), email.toString());
+                PendingDAO.delete(idParam);
 
             } catch (SQLException | ClassNotFoundException e) {
                 logger.error(e.getMessage(), e);
