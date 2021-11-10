@@ -29,4 +29,4 @@ open your brower and go to the localhost where tomcat is running and include the
 
 ## License
 
-This project uses the following license [license_name](link).
+This project uses the following license [license_name](https://github.com/jamescam/Reimbursement-Project/blob/main/LICENSE).
