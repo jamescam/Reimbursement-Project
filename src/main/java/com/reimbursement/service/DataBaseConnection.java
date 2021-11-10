@@ -22,7 +22,7 @@ public class DataBaseConnection {
             logger.info("Set the environment variables!");
 
         }
-        String url = "jdbc:postgresql://localhost:5432/ers";
+        String url = "DB_URL";
         Class.forName("org.postgresql.Driver"); //postgresql driver class
         Connection conn = DriverManager.getConnection(url, username, password);
 
